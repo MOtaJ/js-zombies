@@ -70,12 +70,18 @@ module.exports = {
  * @property {number} energy
  */
 
-/*class Food extends Item {
+class Food extends Item {
   constructor (name, energy){
     super(name)
     this.energy = energy;
   }
-}*/
+}
+
+module.exports = {
+  item: Item,
+  weapon: Weapon,
+  food: Food,
+}
 
 
 /**

@@ -52,7 +52,7 @@ describe ('Weapon', () => {
 
 })
 
-/*describe ('Food', () => {
+describe ('Food', () => {
 
   let food;
 
@@ -60,5 +60,41 @@ describe ('Weapon', () => {
     food = new Zombies.food('name', 'energy');
   })
 
-  it('should have a class', ())
+  it('should have a class', () => {
+    food.should.be.a.function;
+  })
+
+  it('should be an instance of item', () => {
+    food.should.be.an.instanceof(Zombies.item);
+  })
+
+  it('should have a name', () => {
+    food.should.have.property('name');
+  })
+
+  it('should have an energy property', () => {
+    food.should.have.property('energy');
+  })
+
+  it('food should be name Tomato', () => {
+    var tomato = new Zombies.food('Tomato', 50)
+  })
+
+})
+
+/*describe ('Player', () => {
+
+  let player;
+
+  beforeEach(())
 })*/
+
+
+
+
+
+
+
+
+
+
