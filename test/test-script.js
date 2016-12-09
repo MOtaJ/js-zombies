@@ -82,12 +82,26 @@ describe ('Food', () => {
 
 })
 
-/*describe ('Player', () => {
+describe ('Player', () => {
 
   let player;
 
-  beforeEach(())
-})*/
+  beforeEach(() => {
+    player = new Zombies.player('name', 'health', 'strength', 'speed');
+  })
+
+  it('should have a class', () => {
+    player.should.be.a.function;
+  })
+
+  it('should have a name', () => {
+    player.should.have.property('name');
+  })
+
+  it('should have health', () => {
+    player.should.have.property('health');
+  })
+})
 
 
 

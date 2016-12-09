@@ -113,7 +113,7 @@ module.exports = {
  * @property {method} getMaxHealth         Returns private variable `maxHealth`.
  */
 
-/*class Player {
+class Player {
   constructor(name, health, strength, speed){
     this.name = name;
     this.health = health;
@@ -131,7 +131,7 @@ module.exports = {
 
   getMaxHealth(){
       return this._maxHealth;
-  }*/
+  }
 
 
 /**
@@ -326,8 +326,15 @@ module.exports = {
       return this.equipped.name;
 
  }
-}
 }*/
+}
+
+module.exports = {
+  item: Item,
+  weapon: Weapon,
+  food: Food,
+  player: Player,
+}
 /**
  * Class => Zombie(health, strength, speed)
  * -----------------------------
