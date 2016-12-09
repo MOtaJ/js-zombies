@@ -78,8 +78,13 @@ describe ('Food', () => {
 
   it('food should be name Tomato', () => {
     var tomato = new Zombies.food('Tomato', 50)
+    tomato.name.should.equal('Tomato');
   })
 
+  it('food should restore energy', () => {
+    var tomato = new Zombies.food('Tomato', 50)
+    tomato.energy.should.equal(50);
+  })
 })
 
 describe ('Player', () => {
@@ -100,6 +105,10 @@ describe ('Player', () => {
 
   it('should have health', () => {
     player.should.have.property('health');
+  })
+
+  it('should have strength', () => {
+    player.should.have.property('strength');
   })
 })
 
