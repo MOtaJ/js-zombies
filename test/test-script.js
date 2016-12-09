@@ -4,19 +4,61 @@ chai.should();
 
 const Zombies = require ('../zombies.js')
 
-describe('Item', () => {
+describe ('Item', () => {
 
-  let item = Zombies.item;
+  let item;
+
+  beforeEach(() => {
+    item = new Zombies.item('name');
+  })
 
   it('should be a class', () => {
     item.should.be.a.function;
   })
 
   it('should have a name', () => {
-    var lighter = new Item('lighter')
-    Item.name.should.equal('lighter')
+    item.should.have.property('name');
   })
 
+})
 
+describe ('Weapon', () => {
+
+  let weapon;
+
+  beforeEach(() => {
+    weapon = new Zombies.weapon('name', 'damage');
+  })
+
+  it('should have a class', () => {
+    weapon.should.be.a.function;
+  })
+
+  it('should be instance of item', () => {
+    weapon.should.be.instanceof(Zombies.item)
+  })
+
+  it('should have a name', () => {
+    weapon.should.have.property('name')
+  })
+
+  it('should have damage property', () => {
+    weapon.should.have.property('damage')
+  })
+
+  it('weapon should be named longsword', () => {
+    var longsword = new Zombies.weapon('Longsword', 150)
+  })
 
 })
+
+/*describe ('Food', () => {
+
+  let food;
+
+  beforeEach(() => {
+    food = new Zombies.food('name', 'energy');
+  })
+
+  it('should have a class', ())
+})*/
